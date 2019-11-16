@@ -14,15 +14,28 @@
     grid-row-gap: 1.5rem;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-md) {
+        grid-column: 1 / -1;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+        padding: 5rem;
+    }
+
     &__logo {
         height: 3rem;
         justify-self: center;
     }
 
+    &__btn {
+        align-self: start;
+        justify-self: start;
+    }
+
     &__seenon-text {
         display: grid;
         grid-template-columns: 1fr max-content 1fr;
-        grid-column-gap: 15px;
+        grid-column-gap: 1.5px;
         align-items: center;
 
         font-size: 1.6rem;
@@ -35,11 +48,6 @@
             display: block;
             background-color: currentColor;
         }
-    }
-
-    &__btn {
-        align-self: start;
-        justify-self: start;
     }
 
     &__seenon-logo {
